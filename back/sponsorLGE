@@ -1,0 +1,77 @@
+<script src="/js/jquery.js"></script>
+<script src="/js/two.min.js"></script>
+<script>
+$(function() {
+
+          var type = 'svg';
+          var width = $( "body" ).width();
+          var height = $( "body" ).height();
+         // alert(width +" "+height);
+          var two = new Two({
+            type: Two.Types[type],
+			width : width,
+			height : height,
+            autostart: true
+          }).appendTo(document.body);
+		  var list = new Array();
+		  for(var x=0;x<width/44;x++)
+		  	for(var y=0;y<height/44;y++){
+//		  		if (Math.random()<.05+y*.16 ) continue;
+
+		  		  var ax = 0;
+		  		  //if(y%2==1)
+		  		  //	ax+=28.28427124;
+				  var rec1 = two.makeRectangle(44*x+ax, 20+44*y, 40,40);//two.makeCircle(44*x+ax, 20+44*y, 20);
+		
+				  if(Math.random()<.16) 
+				  	rec1.noStroke().fill = 'rgb(239, 203, 214)';
+				  rec1.noStroke().stroke = 'rgb(251, 242, 245)';
+				  list[list.length] = rec1;
+				  //var rec1 = 
+				  // rec1.rotation += .785398163;
+				  //rec1.noStroke().fill = 'rgb(250,244,234)';
+		  }
+		 
+		 
+});
+</script>
+<style>
+body{margin: 0px;height: 900px;overflow:hidden;}
+@font-face {
+    font-family: 'langdon-webfont';
+    src: url('/css/fonts/langdon-webfont.eot');
+    src: url('/css/fonts/langdon-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/css/fonts/langdon-webfont.woff') format('woff'),
+         url('/css/fonts/langdon-webfont.ttf') format('truetype'),
+         url('/css/fonts/langdon-webfont.svg#langdonregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+#parts > .title {
+background-color: #AD0000;
+}
+.title {
+height: 20vh;
+line-height: 17vh;
+background-color: #D5A857;
+text-align: center;
+text-transform: lowercase;
+font-size: 17vh;
+color: #fff;
+font-family: 'langdon-webfont';
+position: fixed;
+width: 100%;
+padding-top: 8vh;
+margin-top: 8vh;
+}
+
+</style>
+<body>
+	<div class="title">
+		sponsor
+	</div>
+	<div>
+
+	</div>
+</body>
