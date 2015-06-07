@@ -59,11 +59,11 @@ function islands(){
 			mycontext.drawImage(img[0], 0, 0 );
 			//var myData = mycontext.getImageData(0, 0, img.width, img.height);
 			if(x/2*pixelSize>cx&&x/2*pixelSize-pixelSize-cx<img[0].width&&y/2*pixelSize>cy&&y/2*pixelSize-cy<img[0].height){
-				var data= mycontext.getImageData(x/2*pixelSize-pixelSize-cx, y/2*pixelSize-pixelSize-cy, 1, 1).data;
+				var data= mycontext.getImageData(x/2*pixelSize-pixelSize/2/scale-cx, y/2*pixelSize-pixelSize/2/scale-cy, 1, 1).data;
 				if(data[3]!=0){
 					test ='#FFF';
 					ctx.fillStyle = test;
-					ctx.fillRect(parseInt((x)*pixelSize-pixelSize),parseInt((y)*pixelSize-pixelSize),pixelSize,pixelSize);
+			ctx.fillRect(parseInt((x)*pixelSize-pixelSize),parseInt((y)*pixelSize-pixelSize),pixelSize,pixelSize);
 					continue;
 				}
 			}
