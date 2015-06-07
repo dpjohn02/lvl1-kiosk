@@ -1,7 +1,7 @@
 
 function lighting(){
 	this.img = new Array();
-	this.imgLoc = ['../../../img/logo-white@2x.png'];
+	this.imgLoc = ['http://davidjokinen.github.io/lvl1-kiosk/img/logo-white@2x.png'];
 	this.screen = null;
 	this.mx=0; this.my=0;
 	this.cx = 0;

@@ -1,7 +1,7 @@
 
 function islands(){
 	var img = new Array();
-	var imgLoc = ['../../../img/logo-white@2x.png'];
+	var imgLoc = ['http://davidjokinen.github.io/lvl1-kiosk/img/logo-white@2x.png'];
 	var screen = null;
 	var mycanvas = document.createElement('canvas');
 	var mycontext = mycanvas.getContext('2d');
