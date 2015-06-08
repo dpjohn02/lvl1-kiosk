@@ -1,5 +1,5 @@
 var SlideShow = Class.extend({
-	init: function (config, commercial){
+	init: function init(config, commercial){
 		this.config = config;
 		this.commercial = commercial;
 		this.focusID = -1;
@@ -7,7 +7,7 @@ var SlideShow = Class.extend({
 		this.intervalTime = 15000;
 		this.commercialTime = 0; 
 		this.commercialTillShow = 0;
-		this.commercialTillShowMax = 2;
+		this.commercialTillShowMax = 1;
 		this.build();
 		this.loop();
 	},
