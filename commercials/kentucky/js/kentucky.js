@@ -101,8 +101,8 @@ var Kentucky = CanvasScene.extend({
 			    	if(lpt != null){
 
 			    		ctx.beginPath();
-					    ctx.moveTo(ctx.width/2+ (+ax-pt.lng)*mx+cx, ctx.height/2+(ay-pt.lat)*my+cy);
-					    ctx.lineTo(ctx.width/2+ (ax-lpt.lng)*mx+cx, ctx.height/2+(ay-lpt.lat)*my+cy);
+					    ctx.moveTo(~~(ctx.width/2+ (+ax-pt.lng)*mx+cx), ~~(ctx.height/2+(ay-pt.lat)*my+cy));
+					    ctx.lineTo(~~(ctx.width/2+ (ax-lpt.lng)*mx+cx),~~( ctx.height/2+(ay-lpt.lat)*my+cy) );
 					 	 ctx.strokeStyle="#BBB";
 					    ctx.closePath();
 					    //ctx.lineWidth=2.4*mx/160;
@@ -136,7 +136,7 @@ var Kentucky = CanvasScene.extend({
 		     buildState(kentuckyPos,"#666");
 		     ctx.fillStyle="#3498db";
 		     var pt = [38.2575, 85.753889];
-		     ctx.fillRect(ctx.width/2+ (+ax-pt[1])*mx+cx-10, ctx.height/2+(ay-pt[0])*my+cy-10,20,20);
+		     ctx.fillRect(~~(ctx.width/2+ (+ax-pt[1])*mx+cx-10), ~~(ctx.height/2+(ay-pt[0])*my+cy-10),20,20);
 		     //
 	  	    
 	  }

@@ -34,8 +34,8 @@ var Vine = Class.extend({
 	render: function(ctx){
 		ctx.lineWidth= this.lineWidth;
 		ctx.beginPath();
-        ctx.moveTo(this.x+this.dX, this.y+this.dY);
-        ctx.lineTo(this.lX-this.dX, this.lY-this.dY);
+        ctx.moveTo(~~(this.x+this.dX), ~~(this.y+this.dY));
+        ctx.lineTo(~~(this.lX-this.dX), ~~(this.lY-this.dY));
         ctx.closePath();
         ctx.strokeStyle=this.color;
         ctx.stroke();
