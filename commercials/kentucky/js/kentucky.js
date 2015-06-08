@@ -5,7 +5,7 @@ var Kentucky = CanvasScene.extend({
 		this.vines = new Array();
 	},
 	update: function(tick){
-		if(this.state > 20){
+		if(this.state > 2){
       		for(var i =0;i<this.vines.length;i++)
       			this.vines[i].update();
       		for(var i =0;i<this.vines.length;i++)
@@ -72,7 +72,7 @@ var Kentucky = CanvasScene.extend({
 		   // this.vines.push(new Vine(ctx.width/2+ (+ax-pt[1])*mx+cx, ctx.height/2+(ay-pt[0])*my+cy,Math.random()*360,10));
 			this.state++;
 	    }
-	    if(1){//this.state == 1){
+	    if(this.state == 1){
 	  		ctx.strokeStyle="#888";
 	  		ctx.lineWidth=.7;
 	  		ctx.beginPath();
@@ -156,7 +156,7 @@ var Kentucky = CanvasScene.extend({
 		var pt = [38.2575, 85.753889];
 		ctx.fillStyle="#3498db";
 		ctx.fillRect(ctx.width/2+ (+ax-pt[1])*mx+cx-10, ctx.height/2+(ay-pt[0])*my+cy-10,20,20);
-      if(this.state > 30){
+      if(this.state > 20){
       	 ctx.fillStyle="#EEE";
       	 ctx.fillRect(20, 20,825,70);
       	 ctx.fillStyle="#444";
@@ -166,7 +166,7 @@ var Kentucky = CanvasScene.extend({
 		//this.state++;
 
       	}
-      	if(this.state > 20){
+      	if(this.state > 2){
       		for(var i =0;i<this.vines.length;i++)
       			this.vines[i].render(ctx);
       	}
