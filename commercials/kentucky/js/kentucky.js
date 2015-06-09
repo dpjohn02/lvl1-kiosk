@@ -4,7 +4,7 @@ var Kentucky = CanvasScene.extend({
 		this.state = 0;
 		this.vines = new Array();
 	},
-	update: function(tick){
+	update: function(ctx,tick){
 		if(this.state > 2){
       		for(var i =0;i<this.vines.length;i++)
       			this.vines[i].update();

@@ -9,21 +9,27 @@
 	<link href="css/style.css" rel="stylesheet">
 	<script>
 		var slideShow;
-		var CONFIG_SLIDES = [{title:"Information",
-								description:"Here is some info. I know you like info",
-								url:"lvl1.html"},
-								{title:"Meetings",
-								description:"Because the ones at work were not enough.",
-								url:"https://www.google.com/calendar/htmlembed?mode=AGENDA&height=400&wkst=1&bgcolor=%23FFFFFF&src=1n5qvjga6i4t6lde35vq5dg8ds@group.calendar.google.com&color=%23A32929&ctz=America/New_York"},
-								{title:"Pictures",
-								description:"Now supporting the color blue!",
-								url:"flicker.html"}
-							  ];
 
-		var CONFIG_COMMERCIAL = ["scenes/islands/", 
-								 "scenes/lighting/",
-								 "scenes/tvfuzz/",
-								 "commercials/kentucky/"];
+		//Add your own slides here! 
+		var CONFIG_SLIDES = [];
+		CONFIG_SLIDES.push({title:"Information",
+							description:"Here is some info. I know you like info",
+							url:"lvl1.html"});
+		CONFIG_SLIDES.push({title:"Meetings",
+							description:"Because the ones at work were not enough.",
+							url:"https://www.google.com/calendar/htmlembed?mode=AGENDA&height=400&wkst=1&bgcolor=%23FFFFFF&src=1n5qvjga6i4t6lde35vq5dg8ds@group.calendar.google.com&color=%23A32929&ctz=America/New_York"});
+		CONFIG_SLIDES.push({title:"Pictures",
+							description:"Now supporting the color blue!",
+							url:"flicker.html"});
+
+		//Add your own commercials here! 
+		var CONFIG_COMMERCIAL = [];
+		CONFIG_COMMERCIAL.push("scenes/islands/index.html");
+		CONFIG_COMMERCIAL.push("scenes/lighting/index.html");
+		CONFIG_COMMERCIAL.push("scenes/tvfuzz/index.html");
+		CONFIG_COMMERCIAL.push("commercials/kentucky/index.html");
+		CONFIG_COMMERCIAL.push("commercials/template/index.html");
+
 
 		$(function() {
 			slideShow = new SlideShow(CONFIG_SLIDES, CONFIG_COMMERCIAL);

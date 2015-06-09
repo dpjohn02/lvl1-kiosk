@@ -1,0 +1,26 @@
+<head>
+	<title>Template</title>
+	<link href='http://fonts.googleapis.com/css?family=League+Script' rel='stylesheet' type='text/css'>
+	<script src="../shared/js/jquery.js"></script>
+	<script src="../shared/js/base.js"></script>
+	<script src="../shared/js/canvasscene.js"></script>
+
+	<!-- The is the file that thinks and draws things to the screen. -->
+	<script src="js/mycommercial.js"></script>
+	<script src="js/box.js"></script>
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<script>
+		window.onload=function(){
+			var commercial = new MyCommercial("myCanvas");
+			commercial.start();	
+		};
+		
+	</script>
+</head>
+<body style="margin: 0;">
+	<canvas style="position: absolute;" id="myCanvas"></canvas>
+</body>
+
+

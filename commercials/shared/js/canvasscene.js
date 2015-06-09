@@ -12,9 +12,8 @@ var CanvasScene = Class.extend({
 		this.canvas.width = window.innerWidth;
 		this.canvas.style.width = window.innerWidth+'px';
 
-		this.loop();
 		this.going = 1;
-		this.time;
+		this.delta_timer = Date.now();
 	},
 	update: function(tick){
 		
@@ -23,20 +22,19 @@ var CanvasScene = Class.extend({
 		
 	},
 	loop: function(){
-		var now = new Date().getTime(),
-		delta = now - (this.time | now);
-		this.time = now;
-		this.update(delta);
+		var now = Date.now();
+		var delta = now - this.delta_timer;
+		//console.log(delta+", "+now+", "+this.delta_timer );
+		this.delta_timer = now;
+		
+		this.update(this.ctx,delta);
 		this.render(this.ctx);
 		if(this.going == 1)
-		if ( !window.requestAnimationFrame ) 
-			window.setTimeout(this.loop.bind(this), 1000 / 60 );
-		else
 			window.requestAnimationFrame(this.loop.bind(this));
 	},
 	start: function(){
 		this.going = 1;
-		this.loop();
+		window.requestAnimationFrame(this.loop.bind(this));
 		
 	},
 	stop: function(){
